@@ -41,7 +41,7 @@ namespace BinarySearch
         }
         private static int[] SortArray(int[] array)
         {
-            return Enumerable.Range(0, array.Length).Select(x => array[x]).OrderBy(x => x).ToArray(); ;
+            return Enumerable.Range(0, array.Length).Select(x => array[x]).OrderBy(x => x).ToArray(); 
         }
         static void Main(string[] args)
         {
