@@ -12,23 +12,29 @@ namespace BinarySearch
             int right = array.Length;
             int mid = left + (right - left) / 2;
 
-            if (array.Any() == false)
-                return _position = -1;
-
-
-            while (array[mid] != target)
+            if(array.Any() == false)
             {
-                if (mid == target)
+                return _position = -1;
+            }
+
+            while(array[mid] != target)
+            {
+                if(mid == target)
+                {
                     return _position = mid;
-
-                if (array[mid] < target)
+                }
+                if(array[mid] < target)
+                {
                     left = mid + 1;
-
-                if (array[mid] > target)
+                }
+                if(array[mid] > target)
+                {
                     right = mid - 1;
-
-                if (left >= right) // No target in array
+                }
+                if(left >= right) // No target in array
+                {
                     return _position = -1;
+                }
                 mid = left + (right - left) / 2;
             }
             return _position = mid;
